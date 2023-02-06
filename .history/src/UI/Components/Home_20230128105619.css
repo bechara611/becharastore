@@ -1,0 +1,9 @@
+.separador {
+    color: var(--verde5);
+    position: relative;
+
+    border: none;
+    height: 12px;
+
+    margin-bottom: 50px;
+}

@@ -1,0 +1,22 @@
+.contenedor-carousel-general{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.carousel-inner{
+    border-radius: 50px;
+  
+  }
+  .carousel-item{
+    border-radius: 50px;
+    
+  }
+  .img-fluid{
+    border-radius: 50px;
+  
+  }
+  .carousel{max-width: 70%;}
+  .contenedor-carousel{display: flex; flex-direction: row; justify-content: center;}

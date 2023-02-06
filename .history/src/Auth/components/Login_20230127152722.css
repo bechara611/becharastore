@@ -1,0 +1,15 @@
+.contenedor-login{
+    height: 65vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+}
+
+.contenedor-form{
+    background: green;
+    
+   height: 70%;
+}

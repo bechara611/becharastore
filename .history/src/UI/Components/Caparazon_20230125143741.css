@@ -1,0 +1,7 @@
+/*Estilos del caparazon como tal principal*/
+.caparazonPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,32 @@
+.card {
+  padding: 5px;
+  background: var(--verde5);
+  max-height: 300px;
+  min-height: 100%;
+ 
+}
+
+.card-title {
+  font-style: italic;
+  color: var(--verde4);
+}
+.contenedor-texto-card{
+  overflow: hidden;
+  max-height: 150px;
+}
+
+/*?RESPONSIVE*/
+
+
+@media (min-width: 999px) {
+  .card:hover {
+    background: var(--verde4);
+    transition: all 0.5s ease;
+  }
+
+  .card:not(:hover) {
+    background: var(--verde5);
+    transition: all 0.5s ease;
+  }
+
+}

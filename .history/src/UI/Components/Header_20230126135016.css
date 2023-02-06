@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    background: rgb(146, 209, 146) url("./../../img/Header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    min-height: 30%;
+    height: 35vh;
+    max-height: 35vh;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}

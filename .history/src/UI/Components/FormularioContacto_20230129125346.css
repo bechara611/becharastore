@@ -1,0 +1,27 @@
+.contenedor-formulario-contacto{
+    background: var(--verde5);
+    border-radius: 10px;
+    border: 2px solid white;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+   
+
+}
+
+.formularioContacto{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 5px;
+}
+
+.textarea{
+    height: 150px;
+    max-height: 150px;
+    min-height: 150px;
+}

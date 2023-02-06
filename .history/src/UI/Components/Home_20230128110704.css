@@ -1,0 +1,9 @@
+.separador {
+    color: var(--verde5);
+    background-color: var(--verde5);
+    height: 30px;
+    margin-top: 30px;
+    border-end-start-radius: 100px;
+    border-top-right-radius: 100px;
+    
+}

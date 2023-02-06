@@ -1,0 +1,19 @@
+
+:root {
+    --verde1: rgb(2, 74, 2);
+    --verde2:rgb(1, 120, 1);
+  }
+
+
+*{
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.fondito{
+    background: red;
+}
+.fondito2{
+    background: purple;
+}

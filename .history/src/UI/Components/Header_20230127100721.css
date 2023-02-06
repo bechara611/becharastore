@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    background: rgb(157, 240, 194) url("./../../img/Header2.jpg");
+    background-color: rgb(18, 18, 18);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    min-height: 30%;
+    height: 35vh;
+    max-height: 35vh;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+/*Aca estoy posicion en el medio el logo como tal del header y luego abajo le pongo una posicion absolute para moverlo*/
+.filaLogoHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+.brand {
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    position: absolute;
+    bottom: -35%;
+ 
+}
+
+/*?RESPONSIVE*/
+
+
+@media(max-width:375px){
+
+    .brand {
+        width: 100px;
+        height:100px;
+        max-height: 100px;
+        max-width: 100px;
+        min-height: 100px;
+        position: absolute;
+        bottom: 0%;
+     
+    }
+}

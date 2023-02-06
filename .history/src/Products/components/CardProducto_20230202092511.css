@@ -1,0 +1,36 @@
+.card {
+  height: 100%;
+  background: darkblue;
+}
+
+
+  .card-title {
+    font-style: italic;
+    color: var(--verde4);
+  }
+
+  /*?RESPONSIVE*/
+  @media (min-width: 768px) {
+    .modal-dialog {
+      width: 600;
+      margin: 30px auto;
+    }
+  
+    .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+  
+    .modal-sm {
+      width: 300px;
+    }
+  }
+  
+  @media (min-width: 999px) {
+    .card2:hover {
+      border-radius: 50px;
+      transition: all 0.5s ease;
+    }
+  
+  }
+  

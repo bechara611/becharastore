@@ -1,0 +1,17 @@
+.PadreHome{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.separador {
+    color: var(--verde5);
+    background-color: var(--verde5);
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    border-end-start-radius: 100px;
+    border-top-right-radius: 100px;
+    
+}

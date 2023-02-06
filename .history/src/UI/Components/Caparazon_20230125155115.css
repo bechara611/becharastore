@@ -1,0 +1,9 @@
+/*Estilos del caparazon como tal principal*/
+.caparazonPrincipal{
+    /*Aca colocamos que el caparazonPrincipal ocupa toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+ 
+}

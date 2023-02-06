@@ -1,0 +1,9 @@
+.contenedor-busqueda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--verde4);
+    margin-top: 10px;
+    padding: 10px;
+}

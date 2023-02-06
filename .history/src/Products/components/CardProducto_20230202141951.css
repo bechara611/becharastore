@@ -1,0 +1,24 @@
+.card {
+  padding: 5px;
+  background: rgb(110, 192, 110,.1);
+}
+  .card-title {
+    font-style: italic;
+    color: var(--verde4);
+  }
+
+  /*?RESPONSIVE*/
+ 
+  
+  @media (min-width: 999px) {
+    .card:hover {
+      background: var(--verde4);
+      transition: all 0.5s ease;
+    }
+    .card:not(:hover) {
+      background: var(--verde5);
+      transition: all 0.5s ease;
+    }
+  
+  }
+  

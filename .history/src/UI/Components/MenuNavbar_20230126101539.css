@@ -1,0 +1,12 @@
+.menunav{
+ 
+}
+.contenedor-interno-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+.fondito{
+    background: red;
+}

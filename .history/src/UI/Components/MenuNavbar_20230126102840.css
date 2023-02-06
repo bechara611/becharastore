@@ -1,0 +1,27 @@
+.menunav{
+ 
+}
+/*Esta parte es el contenedor que tiene el navbar de los navLink es decir, menu como tal.
+Estoy diciendo que normalmente estaran a la derecha.
+*/
+.contenedor-interno-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+
+
+
+/*?RESPONSIVE*/
+/*Necesidad de que el nav el menu se pongan o separados o uno debajo del otro cuando se active el boton del collapse*/
+@media(max-width:992px){
+    .contenedor-interno-nav{
+        justify-content: space-around;
+    }
+}

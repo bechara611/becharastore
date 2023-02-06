@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    background: rgb(146, 209, 146);
+    min-height: 30%;
+    height: 35vh;
+    max-height: 35vh;
+    width: 100%;
+    min-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}

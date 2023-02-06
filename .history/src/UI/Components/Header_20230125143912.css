@@ -1,0 +1,6 @@
+.header{
+    display: flex;
+    background: green;
+    min-height: 30%;
+    height: 30%;
+}

@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    background: rgb(157, 240, 194) url("./../../img/Header2.jpg");
+    background-color:rgb(18, 18, 18) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    min-height: 30%;
+    height: 35vh;
+    max-height: 35vh;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.brand{
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    position: absolute;
+  
+}

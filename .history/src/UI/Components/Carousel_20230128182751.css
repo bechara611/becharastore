@@ -1,0 +1,28 @@
+.carousel-inner{
+    border-radius: 50px;
+  
+  }
+  .carousel-item{
+    border-radius: 50px;
+    
+  }
+  .img-fluid{
+    border-radius: 50px;
+  
+  }
+  .carousel{max-width: 100%;}
+  .contenedor-carousel{display: flex; flex-direction: row; justify-content: center;}
+  .icono {
+      height: 100px;
+      width: 100px;
+  
+        /*shape border*/
+    
+        opacity: 0.3;
+        /*symbol */
+      
+       
+       
+   
+  }
+  .icono:hover{opacity: 1;}

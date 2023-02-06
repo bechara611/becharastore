@@ -1,0 +1,18 @@
+/*Aca estamos poniendo el tamano del contenedor en 65vh para que sea igual que el espacio que le dimo a
+contenedorPrincipal y asi poder centrar el div que tiene el login o registro*/
+.contenedor-login {
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+
+}
+
+.contenedor-form {
+    background: var(--verde5);
+    border-radius: 10px;
+    border: 5px solid var(--verde4);
+    height: 70%;
+}

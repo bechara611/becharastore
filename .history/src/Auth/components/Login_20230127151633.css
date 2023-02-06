@@ -1,0 +1,8 @@
+.contenedor-login{
+    display: flex;
+    height: 100%;
+    background: green;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}

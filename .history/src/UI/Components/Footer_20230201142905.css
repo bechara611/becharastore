@@ -1,0 +1,10 @@
+.footer{
+
+    background: var(--verde5);
+    position: absolute;
+    bottom: -5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}

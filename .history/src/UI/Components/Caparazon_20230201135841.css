@@ -1,0 +1,10 @@
+/*Estilos del caparazon como tal principal*/
+    /*Aca colocamos que el caparazonPrincipal ocupa toda la pantalla, y una direccion en column para que el header sea de 30vh y el resto el otro div  */
+.caparazonPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

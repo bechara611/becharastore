@@ -1,0 +1,8 @@
+/*Estilos del caparazon como tal principal*/
+    /*Aca colocamos que el caparazonPrincipal ocupa toda la pantalla, y una direccion en column para que el header sea  */
+.caparazonPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}

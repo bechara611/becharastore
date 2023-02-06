@@ -1,0 +1,5 @@
+.header{
+    display: flex;
+    background: green;
+    min-height: 30%;
+}

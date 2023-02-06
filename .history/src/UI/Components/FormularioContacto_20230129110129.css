@@ -1,0 +1,6 @@
+.contenedor-formulario-contacto{
+    background: var(--verde5);
+    border-radius: 10px;
+    border: 2px solid white;
+    height: 70%;
+}

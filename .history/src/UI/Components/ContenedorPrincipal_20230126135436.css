@@ -1,0 +1,6 @@
+/*Aca al contenedor ponemos positionRelative para que el footer pueda tener una posicion absoluta y se pueda posicionar al final*/
+.ContenedorPrincipal{
+    min-height: 65vh;
+  
+    position: relative;
+}

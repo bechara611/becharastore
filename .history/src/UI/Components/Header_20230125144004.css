@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+    background: green;
+    min-height: 30%;
+    height: 30%;
+    width: 100%;
+    min-width: 100%;
+}

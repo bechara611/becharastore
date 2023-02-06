@@ -1,0 +1,65 @@
+.contenedor-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50%;
+    z-index: 2;
+    
+}
+
+.menunav {
+    background: rgb(237, 228, 228,.5);
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid rgb(241, 240, 237,.2);
+    
+}
+
+/*Esta parte es el contenedor que tiene el navbar de los navLink es decir, menu como tal.
+Estoy diciendo que normalmente estaran a la derecha.
+*/
+.contenedor-interno-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+/*Diseno a los links como tal*/
+.nav-link{
+    margin-left: 2px;
+}
+/**-----------------------------------------------------------------------------*/
+
+/*?RESPONSIVE*/
+
+/*Para este apartado cuando llegue a cierto tamaño como tal el nav se pondra mas abajo para que al darle al boton se abra y se pueda apreciar y no quede muy arriba*/
+@media(max-width:356px) {
+    .contenedor-nav {
+       bottom: 30%;
+    }
+    /*Aca haces que el navBar tenga todo el tamaño al llegar a dispositivos pequeños*/
+    .menunav {
+        width: 100%;
+        
+    }
+}
+
+/*SERIE DE RESPONSIVES A LOS PADDING DE LAS OPCIONES DEL MENU*/
+
+@media(max-width:375px){
+    .nav-link{
+        margin-left: 5px;
+    }
+}
+
+/*Necesidad de que el nav el menu se pongan o separados o uno debajo del otro cuando se active el boton del collapse*/
+@media(max-width:992px) {
+    .contenedor-interno-nav {
+        justify-content: space-around;
+    }
+}
