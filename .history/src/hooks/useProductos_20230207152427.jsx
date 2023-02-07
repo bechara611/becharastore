@@ -40,18 +40,10 @@ export const useProductos = () => {
         dispatch(onAsignarCategoriasAll(categorias))
     }
 
-    const handledDeleteCategoriasUSE = async({categoria})=>{
-        //TODO DELETE CATEGORIAS
+    const handledDeleteCategoriasUSE = async(categoria)=>{
         console.log('Realizar metodo del useProducto para borrar la categoria')
         console.log(categoria)
     }
-    const handledSaveCategoriasUSE = async({categoria})=>{
-        //TODO GUARDAR CATEGORIAS
-        console.log('Realizar metodo del useProducto para GUARDAR la categoria')
-        console.log(categoria)
-    }
-
-    
     return {
         //metodos
         handledAsignar5productosMasUSE,
@@ -59,7 +51,6 @@ export const useProductos = () => {
         handledResetCargando5USE,
         handledFiltrarproductosUSE,
         handledGetCategoriasUSE,
-        handledDeleteCategoriasUSE,
-        handledSaveCategoriasUSE
+        handledDeleteCategoriasUSE
     }
 }

@@ -59,7 +59,6 @@ export const useProductos = () => {
         handledResetCargando5USE,
         handledFiltrarproductosUSE,
         handledGetCategoriasUSE,
-        handledDeleteCategoriasUSE,
-        handledSaveCategoriasUSE
+        handledDeleteCategoriasUSE
     }
 }

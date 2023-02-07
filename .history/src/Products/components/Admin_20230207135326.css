@@ -1,0 +1,25 @@
+.fila1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+    background: var(--verde4);
+    margin: 2px;
+    margin-bottom: 10px;
+}
+.contenedor-productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+    background: var(--verde4);
+    margin: 5px;
+    margin-bottom: 10px;
+}
