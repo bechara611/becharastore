@@ -111,24 +111,6 @@
         background-size: cover;
     }
 }
-@media(max-width:580px){
-    .contenedor-producto-home-padre{
-        background: url('./../../img/home580.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-}
-@media(max-width:300px){
-    .contenedor-producto-home-padre{
-        background: url('./../../img/home300.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-}
 
 .contenedor-producto-home-jr{
     margin: 10px;
