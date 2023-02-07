@@ -10,7 +10,7 @@ export const CardProducto = ({ producto }) => {
     viene cargado y asi evitamos errores, luego simplmenete mostramos la car que tiene el producto y su informacion
     */}
             {producto?.urlimg &&
-                <div  className="col-10  col-sm-4 col-md-4 cardProducto col-lg-2 m-1 mb-4 animate__animated animate__jackInTheBox " id='cardProducto'>
+                <div  className="col-10  col-sm-4 col-md-4 col-lg-2 m-1 mb-4 animate__animated animate__jackInTheBox ">
                     <div className="card " data-bs-toggle="modal" data-bs-target={`#`+producto._id}>
                         <img src={producto.urlimg} className="card-img-top" alt="Imagen" />
                         <div className="card-body text-center">

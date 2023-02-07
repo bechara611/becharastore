@@ -3,7 +3,7 @@
     background: rgb(157, 240, 194) url("./../../img/Header2.jpg");
     background-color: rgb(18, 18, 18);
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-position: top center;
     min-height: 30%;

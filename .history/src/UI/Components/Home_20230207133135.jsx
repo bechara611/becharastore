@@ -57,7 +57,9 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
         if(EstaActivoElemento(document.getElementById('contenedor-contacto'))){
             setestadoAnimacion({...estadoAnimacion,contacto:true})
         }
-        
+        if(EstaActivoElemento(document.getElementById('contenedor-producto-home-jr'))){
+            setestadoAnimacion({...estadoAnimacion,productosHome:true})
+        }
     })
     return (
         <>

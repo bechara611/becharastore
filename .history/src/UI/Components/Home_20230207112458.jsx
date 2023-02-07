@@ -17,7 +17,6 @@ const {handledGetProductosUSE}= useProductos();
 const {  productoscargando5 } = useSelector((state) => state.products)
 const [estadoAnimacion, setestadoAnimacion] = useState({
     contacto:false,
-    productosHome:false,
 })
     useEffect(() => {
         /**Esta parte es para colocarle al nombre del boton register cuando los dispositivos sean pequenos */
@@ -46,18 +45,18 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
                 document.getElementById('contenedor-contacto').classList.remove('opacity0')
             }, 200);
         }
-      
+       
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [estadoAnimacion.contacto])
-
-
 
     window.addEventListener('scroll',(e)=>{
         if(EstaActivoElemento(document.getElementById('contenedor-contacto'))){
             setestadoAnimacion({...estadoAnimacion,contacto:true})
         }
-        
+        if(EstaActivoElemento(document.getElementById('contenedor-producto-home-jr'))){
+          console.log('prudctosHome')
+        }
     })
     return (
         <>
@@ -100,11 +99,11 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
         </div>
         <div className="row mt-2 mb-2">
         <div className="col-12 contenedor-producto-home-padre">
-        <div className="col-12 contenedor-producto-home-jr" id='contenedor-producto-home-jr'>
+        <div className="col-12 contenedor-producto-home-jr">
         {productoscargando5.length >= 1 &&
                        productoscargando5.map((producto, index) => {
                            if(index<4){
-                               return <CardProducto  key={index} producto={producto}></CardProducto>
+                               return <CardProducto key={index} producto={producto}></CardProducto>
             
                            }else{
 

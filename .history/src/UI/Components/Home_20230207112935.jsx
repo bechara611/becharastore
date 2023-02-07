@@ -46,18 +46,29 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
                 document.getElementById('contenedor-contacto').classList.remove('opacity0')
             }, 200);
         }
+        if (estadoAnimacion.productosHome===true) {
       
 
+    
+            setTimeout(() => {
+               
+       
+                document.getElementById('contenedor-contacto').classList.add('animate__animated')
+                document.getElementById('contenedor-contacto').classList.add('animate__fadeInLeftBig')
+                document.getElementById('contenedor-contacto').classList.remove('opacity0')
+            }, 200);
+        }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [estadoAnimacion.contacto])
-
-
+    }, [estadoAnimacion.contacto,estadoAnimacion.productosHome])
 
     window.addEventListener('scroll',(e)=>{
         if(EstaActivoElemento(document.getElementById('contenedor-contacto'))){
             setestadoAnimacion({...estadoAnimacion,contacto:true})
         }
-        
+        if(EstaActivoElemento(document.getElementById('contenedor-producto-home-jr'))){
+            setestadoAnimacion({...estadoAnimacion,productosHome:true})
+        }
     })
     return (
         <>
@@ -104,7 +115,7 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
         {productoscargando5.length >= 1 &&
                        productoscargando5.map((producto, index) => {
                            if(index<4){
-                               return <CardProducto  key={index} producto={producto}></CardProducto>
+                               return <span><CardProducto  key={index} producto={producto}></CardProducto></span>
             
                            }else{
 

@@ -51,13 +51,30 @@ const [estadoAnimacion, setestadoAnimacion] = useState({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [estadoAnimacion.contacto])
 
+    useEffect(() => {
+    
+        if (estadoAnimacion.productosHome===true) {
+            let elementos= document.getElementsByClassName('cardProducto');
+           
 
+    
+            setTimeout(() => {
+               
+                console.log(elementos)
+            
+            }, 200);
+        }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [estadoAnimacion.productosHome])
 
     window.addEventListener('scroll',(e)=>{
         if(EstaActivoElemento(document.getElementById('contenedor-contacto'))){
             setestadoAnimacion({...estadoAnimacion,contacto:true})
         }
-        
+        if(EstaActivoElemento(document.getElementById('contenedor-producto-home-jr'))){
+            setestadoAnimacion({...estadoAnimacion,productosHome:true})
+        }
     })
     return (
         <>
