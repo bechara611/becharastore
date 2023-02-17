@@ -1,0 +1,40 @@
+
+:root {
+    --verde1: rgb(2, 74, 2);
+    --verde2:rgb(1, 120, 1);
+    --verde3:rgb(23, 215, 119,.5);
+    --verde4:rgba(78,202,132,255);
+    --verde5:rgba(34,128,112,255);
+  }
+
+
+*{
+    color: aliceblue;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Droid Sans', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.fondito{
+    background: var( --verde5);
+}
+.fondito2{
+    background: purple;
+}
+
+.cuadrado{
+    background: red;
+    height: 200px;
+    width: 200px;
+transition: all 1s ease;
+animation-duration: 1s;
+}
+.cuadrado:hover{
+    animation-name: colores;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes colores {
+    from{background: blue; translate:5px ; transform: translateX(100px);} 
+    to{background: orange;}
+}

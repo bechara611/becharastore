@@ -1,0 +1,44 @@
+import React, { useEffect } from 'react'
+import { Caparazon } from './UI/Components/Caparazon'
+import { ContenedorPrincipal } from './UI/Components/ContenedorPrincipal'
+import { Header } from './UI/Components/Header'
+import { Footer } from './UI/Components/Footer'
+import { MainCuerpo } from './UI/Components/MainCuerpo'
+import { useDispatch, useSelector } from 'react-redux'
+import { onResetError } from './UI/slice/uiSlice'
+import Swal from 'sweetalert2'
+export const App = () => {
+  const uiEstado = useSelector((state)=>state.ui)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    document.getElementById('cuadrado').addEventListener('mouseenter',()=>{console.log('cuadrado')})
+    if(uiEstado.error!==null){
+      console.log(uiEstado.error)
+      Swal.fire('Error',uiEstado.error,'error')
+      dispatch(onResetError())
+
+    } 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [uiEstado.error])
+  
+  return (
+    <>
+      {/*Primero el caparazon de la pagina, que es un div que tiene un 100vh de altura, el cual en el obtiene a sus children:
+    esto children son el Header ocupando el 30vh y el Contenedor Principal ocupando el 70vh restante.
+  */}
+      <Caparazon>
+        <Header></Header>
+        <ContenedorPrincipal> {/*El contenedor principal a su vez lleva sus hijos dos elementos, el footer que le pusimos absolute para ubicarlo de ultimo y el MainCuerpo que tienes las rutas */}
+          <MainCuerpo></MainCuerpo>{/*Este MainCuerpo tiene las rutas de la aplicacion, es el main de la pagina y lo que va a cambiar dependiendo donde estemos */}
+       
+        
+          <Footer></Footer>  {/*Este es el footer que utilizamos para el pie de pagina, tiene posicion absolute como dije anteriormnete */}
+        </ContenedorPrincipal>
+
+      <div className='cuadrado' id='cuadrado'>
+      <h1>Hola</h1></div>
+      </Caparazon>
+    </>
+
+  )
+}
