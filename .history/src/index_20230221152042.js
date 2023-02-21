@@ -8,14 +8,23 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 import { Provider } from 'react-redux';
 import { store } from './store/Store';
 
-
-
+const App2=()=>{
+    return(
+        <>
+        <h1>App2</h1>
+        <form action="">
+        <input type="text" name="Nombre" id="" placeholder='Nombre' />
+        <input type="text" name="Email" id="" placeholder='Email' />
+        </form>
+        </>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
     <BrowserRouter>
-    <App />
+    <App2 />
     </BrowserRouter>
     </Provider>
 );
