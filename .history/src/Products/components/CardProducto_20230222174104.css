@@ -1,0 +1,68 @@
+.card {
+  padding: 5px;
+  background: var(--verde5);
+  cursor: pointer;
+  min-height: 300px;
+  overflow-y: hidden;
+  max-height: 300px;
+}
+.card-title {
+  font-style: italic;
+  color: var(--verde4);
+}
+/*Para que se oculte POR SI ACASO la descripcion*/
+.contenedor-texto-card{
+  overflow: hidden;
+  max-height: 150px;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+}
+
+/*?RESPONSIVE*/
+@media (min-width: 999px) {
+  .card:hover {
+    background: var(--verde4);
+    transition: all 0.5s ease;
+  }
+  .card {
+
+    min-height: 300px;
+  
+    max-height: none;
+  }
+ .card:hover .card-title{
+  color: white;
+  transition: all .5s ease;
+ }
+  .card:not(:hover) {
+    background: var(--verde5);
+    transition: all 0.5s ease;
+  }
+
+}
+
+
+.card{
+  position: relative;
+  text-align: center;
+
+}
+
+.textoCard{
+  background: rgb(78, 145, 126);
+  padding: 3px;
+  opacity: 1;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.opacitylow{
+  opacity: .5;
+}
+.opacityUP{
+  opacity: 1;
+}
