@@ -14,7 +14,7 @@ export const Admin = () => {
     const [form, setform] = useState({
         categoryEscrito: '',
         categorySeleccionada: '',
-        productoidstore: process.env.REACT_APP_IDSTORE,
+        productoidstore: 'becharastore',
         productotitle: '',
         productodescription: '',
         productodescriptionLong: '',
@@ -28,7 +28,7 @@ export const Admin = () => {
             ...form,
             categoryEscrito: '',
             categorySeleccionada: '',
-            productoidstore: 'DBB26',
+            productoidstore: 'becharastore',
             productotitle: '',
             productodescription: '',
             productodescriptionLong: '',

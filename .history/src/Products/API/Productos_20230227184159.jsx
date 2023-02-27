@@ -197,13 +197,12 @@ export const PostsaveCategorias = async (CategoryName) => {
     })
 }
 
-export const DeleteCategorias = async (CategoryName) => {
+export const DeleteCategorias = async ({CategoryName}) => {
     //TODO este como tal es el metodo borrar categoria, debes recibir el id o los datos completos de la categoria
 
     return new Promise(async(resolve, reject) => {
         try {
-            console.log(CategoryName)
-            const {data} = await InstanceBD.delete('categories/delete',{data:{CategoryName:CategoryName}})
+            const {data} = await InstanceBD.delete('categories/delete',{CategoryName:CategoryName})
       
           resolve(data)
           Swal.fire('Success', 'CATEGORY DELETED', 'success')

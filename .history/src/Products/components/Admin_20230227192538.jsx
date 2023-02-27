@@ -14,7 +14,7 @@ export const Admin = () => {
     const [form, setform] = useState({
         categoryEscrito: '',
         categorySeleccionada: '',
-        productoidstore: process.env.REACT_APP_IDSTORE,
+        productoidstore: process.env.REACT_APP_BACKEND,
         productotitle: '',
         productodescription: '',
         productodescriptionLong: '',

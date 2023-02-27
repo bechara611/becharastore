@@ -46,7 +46,7 @@ export const MenuNavbar = () => {
                            
                             <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'activeLink':'' }` } to={'/Products'} onClick={()=>Animacionlogo()}>Products</NavLink>
                             {
-                                authEstado.user.level==='ADMIN' ||authEstado.user.level==='admin' ?    <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'activeLink':'' }` } to={'/admin'} onClick={()=>Animacionlogo()}>Admin</NavLink> :<></>
+                                authEstado.user.level.toUpperCase()==='ADMIN' ||authEstado.user.level==='admin' ?    <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'activeLink':'' }` } to={'/admin'} onClick={()=>Animacionlogo()}>Admin</NavLink> :<></>
                             }
                        
                             <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'activeLink':'' }` } to={'/Register'} onClick={()=>Animacionlogo()}>Register</NavLink>
@@ -56,10 +56,6 @@ export const MenuNavbar = () => {
                                     dispatch(onLogout())
                                    localStorage.removeItem('token')
                                    localStorage.removeItem('email')
-                                   localStorage.removeItem('_id')
-                                   localStorage.removeItem('level')
-                                   localStorage.removeItem('name')
-                        
                                     }}> <i title='Logout' className="fa-solid fa-arrow-right-from-bracket logout-icono"></i></NavLink>
                                 
                              :

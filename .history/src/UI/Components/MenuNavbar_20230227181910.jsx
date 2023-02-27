@@ -56,10 +56,6 @@ export const MenuNavbar = () => {
                                     dispatch(onLogout())
                                    localStorage.removeItem('token')
                                    localStorage.removeItem('email')
-                                   localStorage.removeItem('_id')
-                                   localStorage.removeItem('level')
-                                   localStorage.removeItem('name')
-                        
                                     }}> <i title='Logout' className="fa-solid fa-arrow-right-from-bracket logout-icono"></i></NavLink>
                                 
                              :

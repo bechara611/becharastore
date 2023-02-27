@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     user: {
-        token: localStorage.getItem('token') ? localStorage.getItem('token') : '',
-        _id: localStorage.getItem('id') ? localStorage.getItem('_id') : '',
-        name: localStorage.getItem('name') ? localStorage.getItem('name') : '',
-        email: localStorage.getItem('email') ? localStorage.getItem('email') : '',
-        level: localStorage.getItem('level') ? localStorage.getItem('level') : '',
+        token: '',
+        _id: '',
+        name: '',
+        email: '',
+        level: ''
     },
     status: localStorage.getItem('token') ? 'logueado' : 'no-logueado',
     initialDate: new Date()

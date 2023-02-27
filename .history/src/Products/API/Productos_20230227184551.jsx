@@ -203,7 +203,7 @@ export const DeleteCategorias = async (CategoryName) => {
     return new Promise(async(resolve, reject) => {
         try {
             console.log(CategoryName)
-            const {data} = await InstanceBD.delete('categories/delete',{data:{CategoryName:CategoryName}})
+            const {data} = await InstanceBD.delete('categories/delete',{},{CategoryName:CategoryName})
       
           resolve(data)
           Swal.fire('Success', 'CATEGORY DELETED', 'success')

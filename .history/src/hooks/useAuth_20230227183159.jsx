@@ -12,12 +12,9 @@ const navegar = useNavigate();
   
     try {
       const {data} = await InstanceBD.post('auth/login',{email,password})
-     //  console.log(data)
+       console.log(data)
       localStorage.setItem('token',data.token)
       localStorage.setItem('email',data.user.email)
-      localStorage.setItem('name',data.user.name)
-      localStorage.setItem('level',data.user.level)
-      localStorage.setItem('_id',data.user._id)
     //?Esta funcion del slice hace login, antes de llamarla ya todo debe salir bien en el backend
     dispatch(onLogin({
       token: data.token,

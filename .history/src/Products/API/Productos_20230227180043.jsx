@@ -188,7 +188,7 @@ export const PostsaveCategorias = async (CategoryName) => {
             const {data} = await InstanceBD.post('categories/insert',{CategoryName:CategoryName})
           console.log(data)
           resolve(data)
-          Swal.fire('Success', 'CATEGORY CREATED', 'success')
+          Swal.fire('Success', 'CATEGORY CREATED', 'info')
         } catch (error) {
             let errorString =  JSON.stringify(error?.response?.data?.errores?.errors[0].msg) || 'PLEASE, CHECK YOUR INFORMATION'
             Swal.fire('Error', errorString, 'error')
@@ -197,19 +197,13 @@ export const PostsaveCategorias = async (CategoryName) => {
     })
 }
 
-export const DeleteCategorias = async (CategoryName) => {
+export const DeleteCategorias = async () => {
     //TODO este como tal es el metodo borrar categoria, debes recibir el id o los datos completos de la categoria
 
-    return new Promise(async(resolve, reject) => {
+    return new Promise((resolve, reject) => {
         try {
-            console.log(CategoryName)
-            const {data} = await InstanceBD.delete('categories/delete',{data:{CategoryName:CategoryName}})
-      
-          resolve(data)
-          Swal.fire('Success', 'CATEGORY DELETED', 'success')
+            resolve(true)
         } catch (error) {
-            let errorString =  JSON.stringify(error?.response?.data?.errores?.errors[0].msg) || 'PLEASE, CHECK YOUR INFORMATION'
-            Swal.fire('Error', errorString, 'error')
             reject(false)
         }
     })

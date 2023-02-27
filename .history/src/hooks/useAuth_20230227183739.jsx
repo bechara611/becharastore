@@ -12,7 +12,7 @@ const navegar = useNavigate();
   
     try {
       const {data} = await InstanceBD.post('auth/login',{email,password})
-     //  console.log(data)
+     --  console.log(data)
       localStorage.setItem('token',data.token)
       localStorage.setItem('email',data.user.email)
       localStorage.setItem('name',data.user.name)

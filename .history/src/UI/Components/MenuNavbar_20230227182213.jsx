@@ -51,15 +51,11 @@ export const MenuNavbar = () => {
                        
                             <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'activeLink':'' }` } to={'/Register'} onClick={()=>Animacionlogo()}>Register</NavLink>
                             {
-                                authEstado.status==='logueado' ? 
+                                authEstado.user.status==='logueado' ? 
                                 <NavLink id='navLogout' className={ ({isActive}) => `nav-item nav-link ` } to={'/'} onClick={()=>{Animacionlogo()
                                     dispatch(onLogout())
                                    localStorage.removeItem('token')
                                    localStorage.removeItem('email')
-                                   localStorage.removeItem('_id')
-                                   localStorage.removeItem('level')
-                                   localStorage.removeItem('name')
-                        
                                     }}> <i title='Logout' className="fa-solid fa-arrow-right-from-bracket logout-icono"></i></NavLink>
                                 
                              :

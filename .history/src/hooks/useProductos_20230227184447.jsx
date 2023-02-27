@@ -68,12 +68,10 @@ export const useProductos = () => {
         console.log('entraste al metodo en el useProductos para borrar producto')
         console.log(productoBD)
         await DeleteProductos();
-        await  handledGetCategoriasUSE();
     }
     //*categorias
     const handledGetCategoriasUSE = async () => {
         const categorias = await GetCategorias();
-        dispatch(onAsignarCategoriasAll(['']))
         dispatch(onAsignarCategoriasAll(categorias))
     }
 

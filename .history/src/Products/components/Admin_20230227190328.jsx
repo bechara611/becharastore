@@ -14,7 +14,7 @@ export const Admin = () => {
     const [form, setform] = useState({
         categoryEscrito: '',
         categorySeleccionada: '',
-        productoidstore: process.env.REACT_APP_IDSTORE,
+        productoidstore: '',
         productotitle: '',
         productodescription: '',
         productodescriptionLong: '',
@@ -28,7 +28,7 @@ export const Admin = () => {
             ...form,
             categoryEscrito: '',
             categorySeleccionada: '',
-            productoidstore: 'DBB26',
+            productoidstore: '',
             productotitle: '',
             productodescription: '',
             productodescriptionLong: '',
@@ -90,7 +90,7 @@ export const Admin = () => {
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [categorias,boton])
+    }, [categorias])
 
     //? este metodo llama al metodo del useProductos para guardar una nueva categoria
     const onSaveCategorias = async() => {
@@ -169,13 +169,12 @@ export const Admin = () => {
             showDenyButton: true,
             confirmButtonText: 'Delete',
             denyButtonText: `Cancel`,
-        }).then(async(result) => {
+        }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-               await handledDeleteCategoriasUSE({ category: form.categorySeleccionada });
+                handledDeleteCategoriasUSE({ category: form.categorySeleccionada });
                 //TODO comprobar que se borre la categoria seleccionada para luego poder mostrar mensaje de exito
-                await handledGetCategoriasUSE()
-                setboton(!boton)
+              
             } else if (result.isDenied) {
     
             }
@@ -274,7 +273,7 @@ export const Admin = () => {
                         </div>
                         <div className="row  centrarFilaFormulario ">
                             <div className=" col-12 col-sm-4">
-                                <input id='txtidInterno' value={form.productoidstore} type="text" className='form-control ' placeholder='ID' disabled onChange={(e) => {
+                                <input id='txtidInterno' value={form.productoidstore} type="text" className='form-control ' placeholder='ID' onChange={(e) => {
                                     setform({ ...form, productoidstore: e.target.value })
                                 }} />
                             </div>

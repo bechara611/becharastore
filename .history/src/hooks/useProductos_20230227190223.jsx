@@ -73,7 +73,7 @@ export const useProductos = () => {
     //*categorias
     const handledGetCategoriasUSE = async () => {
         const categorias = await GetCategorias();
-        dispatch(onAsignarCategoriasAll(['']))
+        dispatch(onAsignarCategoriasAll([]))
         dispatch(onAsignarCategoriasAll(categorias))
     }
 

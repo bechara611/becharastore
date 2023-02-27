@@ -14,7 +14,7 @@ export const Admin = () => {
     const [form, setform] = useState({
         categoryEscrito: '',
         categorySeleccionada: '',
-        productoidstore: process.env.REACT_APP_IDSTORE,
+        productoidstore: '',
         productotitle: '',
         productodescription: '',
         productodescriptionLong: '',
@@ -28,7 +28,7 @@ export const Admin = () => {
             ...form,
             categoryEscrito: '',
             categorySeleccionada: '',
-            productoidstore: 'DBB26',
+            productoidstore: '',
             productotitle: '',
             productodescription: '',
             productodescriptionLong: '',
@@ -43,22 +43,6 @@ export const Admin = () => {
     // eslint-disable-next-line no-unused-vars
     const { handledGetProductosUSE, handledGetCategoriasUSE, handledDeleteCategoriasUSE, handledSaveCategoriasUSE, handledSaveProductosUSE } = useProductos();
 
-    useEffect(() => {
-        const metodoo = async () => {
-            //hacemos que salga el estado cargando
-
-            dispatch(onCargando())
-
-            //?carga por primera vez tanto TODOS los productos en el vector original y al mismo tiempo ejecuta el del clon con indice 0 y 5.
-            await handledGetProductosUSE()
-            //TODO PENDIENTE QUE TODO ESTE MODULO Y ESTA PARTE DONDE CARGAN PRODUCTOS Y CATEGORIAS DEBE FUNCIONAR
-            await handledGetCategoriasUSE()
-            dispatch(onStopCargando())
-        }
-        metodoo();
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
     useEffect(() => {
         const metodoo = async () => {
             //hacemos que salga el estado cargando
@@ -90,13 +74,12 @@ export const Admin = () => {
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [categorias,boton])
+    }, [categorias])
 
     //? este metodo llama al metodo del useProductos para guardar una nueva categoria
-    const onSaveCategorias = async() => {
+    const onSaveCategorias = () => {
         handledSaveCategoriasUSE({ categoria: form.categoryEscrito });
         //TODO verificar aca que si se guarde la categoria para poder mostrar el mensaje
-        await handledGetCategoriasUSE()
         setboton(!boton)
         // Swal.fire('Success', 'Register complete', 'success');
     }
@@ -153,7 +136,7 @@ export const Admin = () => {
      
     }
     //? este metodo llama al metodo del useProductos para borrar una nueva categoria
-    const onDeleteCategorias =async () => {
+    const onDeleteCategorias = () => {
 
         if (form.categorySeleccionada === '') {
             if (!categorias) {
@@ -169,18 +152,16 @@ export const Admin = () => {
             showDenyButton: true,
             confirmButtonText: 'Delete',
             denyButtonText: `Cancel`,
-        }).then(async(result) => {
+        }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-               await handledDeleteCategoriasUSE({ category: form.categorySeleccionada });
+                handledDeleteCategoriasUSE({ categoria: form.categorySeleccionada });
                 //TODO comprobar que se borre la categoria seleccionada para luego poder mostrar mensaje de exito
-                await handledGetCategoriasUSE()
-                setboton(!boton)
+                Swal.fire('Delete!', '', 'success')
             } else if (result.isDenied) {
-    
+
             }
         })
-        setboton(!boton)
     }
 
 
@@ -214,7 +195,7 @@ export const Admin = () => {
                                 onSaveCategorias();
                                 //Borrar el textbox
                                 setform({ ...form, categoryEscrito: '' })
-                                
+                              
                             }}>Save</button>
                         </div>
                         <hr />
@@ -274,7 +255,7 @@ export const Admin = () => {
                         </div>
                         <div className="row  centrarFilaFormulario ">
                             <div className=" col-12 col-sm-4">
-                                <input id='txtidInterno' value={form.productoidstore} type="text" className='form-control ' placeholder='ID' disabled onChange={(e) => {
+                                <input id='txtidInterno' value={form.productoidstore} type="text" className='form-control ' placeholder='ID' onChange={(e) => {
                                     setform({ ...form, productoidstore: e.target.value })
                                 }} />
                             </div>

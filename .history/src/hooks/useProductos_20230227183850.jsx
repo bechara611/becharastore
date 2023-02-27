@@ -68,23 +68,21 @@ export const useProductos = () => {
         console.log('entraste al metodo en el useProductos para borrar producto')
         console.log(productoBD)
         await DeleteProductos();
-        await  handledGetCategoriasUSE();
     }
     //*categorias
     const handledGetCategoriasUSE = async () => {
         const categorias = await GetCategorias();
-        dispatch(onAsignarCategoriasAll(['']))
         dispatch(onAsignarCategoriasAll(categorias))
     }
 
-    const handledDeleteCategoriasUSE = async ({ category }) => {
+    const handledDeleteCategoriasUSE = async ({ categoria }) => {
         //TODO DELETE CATEGORIAS
         console.log('Realizar metodo del useProducto para borrar la categoria')
-        console.log(category)
-        await DeleteCategorias(category);
+        console.log(categoria)
+        await DeleteCategorias();
     }
     const handledSaveCategoriasUSE = async ({ categoria='ALL' }) => {
-      
+        //TODO GUARDAR CATEGORIAS
      
         await PostsaveCategorias(categoria.toUpperCase());
     }

@@ -20,7 +20,6 @@ export const productSlice = createSlice({
     onAsignarProductosAll: (state, { payload }) => {
       //TODO asignar todos a productos All, el payload.productos lo recibe del backend
       state.productosAll = []
-      state.productoscargando5= []
       state.productosAll = payload.productos
       //?esta parte agrega los primeros 5 productos que ya se tienen
       if (!state.productosAll) { return }
