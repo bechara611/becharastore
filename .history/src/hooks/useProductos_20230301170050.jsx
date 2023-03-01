@@ -48,7 +48,7 @@ export const useProductos = () => {
     }
     //metodo para ACTUALIZAR un producto
     const handledUpdateProductosUSE = async ({ productoNuevo, productoBD }) => {
-      //  console.log({productoNuevo,productoBD})
+        console.log({productoNuevo,productoBD})
         await PostUpdateProductos({ productoNuevo, productoBD });
     }
 

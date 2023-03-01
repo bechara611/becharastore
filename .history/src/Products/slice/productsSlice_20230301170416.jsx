@@ -63,7 +63,7 @@ export const productSlice = createSlice({
       if (payload.category !== 'ALL' && payload.search === '') {
 
         vectorTemporal = state.productoscargando5.filter((elemento) => {
-          if (elemento.categoria === payload.category) {
+          if (elemento.categoria.match(expRCategory)) {
             return elemento
           }
           return null

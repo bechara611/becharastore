@@ -51,7 +51,7 @@ export const productSlice = createSlice({
       //generamops un vector temporal y dos regular expresion que van a contened rla categoria enviada y el search
       let vectorTemporal = [];
       let expR = new RegExp(payload.search, 'i')
-      let expRCategory = new RegExp(payload.category, 'i')
+      let expRCategory = new RegExp(payload.category, 'u')
 
       //validamos si le dio enter con el textbox de busqueda vacio y aunado a eso no cambio la categoria pues no hara nada y ejecutamos un return
       if (payload.category === 'ALL' && payload.search === '') {
@@ -63,7 +63,7 @@ export const productSlice = createSlice({
       if (payload.category !== 'ALL' && payload.search === '') {
 
         vectorTemporal = state.productoscargando5.filter((elemento) => {
-          if (elemento.categoria === payload.category) {
+          if (elemento.categoria.match(expRCategory)) {
             return elemento
           }
           return null
